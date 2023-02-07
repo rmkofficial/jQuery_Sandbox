@@ -13,7 +13,6 @@ function myFunction() {
   $("h1").css("color", "yellow");
 }
 
-
 $("button.pu").click(function () {
   $("h1").css("color", "purple");
 });
@@ -27,12 +26,29 @@ $("button.pi").click(function () {
   $("h1").css("color", "pink");
 });
 
+$("body").keypress(function (event) {
+  $("h1").text(event.key).slideUp().slideDown();
+});
 
-$("body").keypress(function(event){
-    $("h1").text(event.key);
-})
+// $("body").keypress(function(e){
+//   $("h1").animate({opacity:0.5});
+// })
+// $("h1").on("mouseover", function(){
+//     $("h1").css("color","aqua");
+// })
 
-$("h1").on("mouseover", function(){
-    $("h1").css("color","aqua");
-})
+// $("button").on("click", function(){
+//   $("h1").fadeToggle();
+// })
 
+// $("button").on("click", function(){
+//   $("h1").slideToggle();
+// })
+
+// $("button").on("click", function(){
+//   $("h1").animate({opacity: 0.5, margin: 200,});
+// })
+
+$("button").on("click", function () {
+  $("h1").animate({ opacity: 0.5 }).slideUp().slideDown();
+});
